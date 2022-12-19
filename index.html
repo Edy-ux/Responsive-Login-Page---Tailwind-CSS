@@ -5,49 +5,77 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
+    <title>Login</title>
   </head>
   <body>
     <section class="min-h-screen bg-gray-100 flex justify-center items-center">
       <!-- Login container -->
-      <div class="bg-gray-100  rounded-2xl max-w-3xl p-5 shadow-2xl flex">
+      <div class="bg-gray-100 rounded-2xl max-w-3xl p-5 shadow-2xl flex">
         <!-- Form -->
         <div class="md:w-1/2 px-16">
           <h2 class="text-2xl font-bold text-[#002D74]">Login</h2>
           <p class="text-sm mt-4">Se já é membro faça login facilmente</p>
 
           <!-- Form input -->
-        <form action="" class="flex  gap-4 flex-col ">
-          <input
-            class="p-2 mt-8 outline-none rounded-xl border"
-            type="text"s
-            name="email"
-            placeholder="Email"
-          />
-           <div class="relative">
-            <input class="p-2 w-full  outline-none rounded-xl border" type="password" name="password" placeholder="Senha" />
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye absolute top-1/2 right-3 -translate-y-1/2" viewBox="0 0 16 16">
-                <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
-                <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
-             </svg>
-           </div>
-          <button class="bg-[#002D74] text-white font-bold py-2 rounded-xl transition-opacity">Entrar</button>
-        </form>
-        <!-- or  grid -->
-         <div class="mt-10 grid grid-cols-3 items-center">
-            <hr class="border-gray-400">
-            <p class="text-gray-400 text-center">Ou</p>
-            <hr class="border-gray-400">
-         </div>
-        <!-- Register -->
-         <div class="flex items-center">
-            <p class="text-sm">
-                Não é cadastro? Se Cadastre agora mesmo.
+          <form action="" class="flex gap-4 flex-col">
+            <input
+              class="p-2 mt-8 outline-none rounded-xl border"
+              type="text"   
+              name="email"
+              placeholder="Email"
+            />
+            <div class="relative">
+              <input
+                class="p-2 w-full outline-none rounded-xl border"
+                type="password"
+                name="password"
+                placeholder="Senha"
+              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="gray"
+                class="bi bi-eye absolute top-1/2 right-3 -translate-y-1/2"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"
+                />
+                <path
+                  d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"
+                />
+              </svg>
+            </div>
+            <button
+              class="bg-[#002D74]  text-white font-bold py-2 rounded-xl hover:scale-105 duration-500"
+            >
+              Entrar
+            </button>
+          </form>
+          <!-- or  grid -->
+          <div class="mt-10 grid grid-cols-3 items-center">
+            <hr class="border-gray-400" />
+            <p class="text-gray-400 text-center text-sm">Ou</p>
+            <hr class="border-gray-400" />
+          </div>
+          <!-- login with google -->
+          <button class="border  hover:scale-105 rounded-xl py-2 w-full bg-white mt-5 flex justify-center gap-2 items-center text-sm duration-500"> 
+            <!-- SVG google -->
+            <img src="/assets/google-logo.svg" alt="">
+            Login com Google
+        </button>
+         
+            <p class="text-xs mt-10 border-b py-6">
+                Esqueceu sua senha?
             </p>
-            <button class="border ml-1">Register</button>
-         </div>
-         </div>
-        
+             <div class="text-xs font-semibold flex justify-between items-center mt-3">
+                 Não tem conta?
+                <button class=" font-semibold hover:scale-105 duration-500 py-2 px-5 rounded-xl bg-white border">Register</button>
+             </div>
+              
+        </div>
+
         <!-- image -->
         <div class="w-1/2 p-3 md:block hidden">
           <img src="/assets/photo.avif" alt="photo-login" class="rounded-2xl" />
